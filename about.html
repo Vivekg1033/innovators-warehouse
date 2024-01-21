@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Half and Half Layout</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    
+
+
+
+    <div id="carousel-container" class="carousel-fade">
+        <div id="carousel">
+            <div><img src="img1.jpg" alt="Image 1"></div>
+            <div><img src="img2.jpg" alt="Image 2"></div>
+            <div><img src="a-cold-storage-warehouse.jpg" alt="Image 3"></div>
+
+        </div>
+    </div>
+    <div id="paragraph-container">
+        <h1>About us:</h1>
+        <p>Welcome to INNOVATORS WAREHOUSE, where precision meets efficiency in the heart of our warehouse operations.
+            Our state-of-the-art facility is more than just a storage space; it's a dynamic hub designed to meet the
+            evolving needs of modern businesses.
+            Warehouses play a crucial role in the supply chain by providing storage and distribution facilities for
+            goods. Warehouse ventures could encompass various activities, such as investing in warehouse real estate,
+            establishing logistics and fulfillment services, or developing technology solutions for warehouse
+            management.
+            <br>
+            <br>
+            <B>Our Commitment to Excellence:</B>
+            At INNOVATORS, we understand the importance of seamless logistics and reliable inventory management. Our
+            commitment to excellence drives us to maintain a warehouse that goes beyond mere storage—it's a strategic
+            asset that empowers your business growth.
+            <br>
+            <br>
+            <B>Cutting-Edge Technology:</B>
+            Equipped with cutting-edge technology, our warehouse integrates automated systems and real-time tracking to
+            ensure accuracy and speed in handling your inventory. We leverage the latest innovations to streamline
+            operations, from smart barcode systems to advanced inventory control software..
+        </p>
+        <b>Sustainability Initiatives:</b>We believe in responsible business practices. Our warehouse operates with
+        sustainability in mind, implementing eco-friendly initiatives to reduce our environmental footprint.
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#carousel').slick({
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        });
+    </script>
+</body>
+
+</html>

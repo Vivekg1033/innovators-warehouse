@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incoming Stock Calculator</title>
+    <link rel="stylesheet" href="storage.css">
+    <script src="app.js"></script>
+</head>
+
+<body>
+
+
+    <div id="calculator-container">
+        <h1>Incoming Stock Calculator</h1>
+
+        <label for="currentStock">Current Stock:</label>
+        <input type="number" id="currentStock" placeholder="Enter current stock..." required>
+
+        <label for="incomingQuantity">Incoming Quantity:</label>
+        <input type="number" id="incomingQuantity" placeholder="Enter incoming quantity..." required>
+
+        <button onclick="calculateAndUpdateStock()">Calculate and Update Stock</button>
+
+        <p id="updatedStockResult"></p>
+    </div>
+</body>
+
+</html>
