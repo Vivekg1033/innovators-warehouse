@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Item Locator</title>
+    <link rel="stylesheet" href="exp.css">
+</head>
+
+<body>
+
+    <div id="item-details-container">
+        <h1>Item Details</h1>
+        <label for="itemName">Item Name:</label>
+        <input type="text" id="itemName" name="itemName" required>
+
+        <label for="itemDescription">Item Description:</label>
+        <input type="text" id="itemDescription" name="itemDescription" required>
+
+        <label for="itemCode">Item Code:</label>
+        <input type="text" id="itemCode" name="itemCode" required>
+
+        <label for="itemLocation">Item Location:</label>
+        <input type="text" id="itemLocation" name="itemLocation" required>
+
+        <button onclick="submitItemDetails()">Enter</button>
+    </div>
+
+    <div id="locator-container">
+        <h1>Quick Item Locator</h1>
+        <label for="locatorItemCode">Enter Item Code:</label>
+        <input type="text" id="locatorItemCode" name="locatorItemCode" required>
+
+        <button onclick="locateItem()">Locate Item</button>
+
+        <p id="result"></p>
+
+        <div id="card">
+            <img src="img3.jpg" alt="Card Image">
+            <div id="card-content">
+                <h3>Ware House</h3>
+                <p>Warehousing has unique health and safety challenges and has been recognized by the National Institute
+                    for Occupational Safety and Health (NIOSH)
+                    to identify and provide intervention strategies regarding occupational health and safety issues</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function submitItemDetails() {
+            const itemName = document.getElementById('itemName').value;
+            const itemDescription = document.getElementById('itemDescription').value;
+            const itemCode = document.getElementById('itemCode').value;
+            const itemLocation = document.getElementById('itemLocation').value;
+
+
+            simulateBackendSubmission(itemName, itemDescription, itemCode, itemLocation);
+
+
+            document.getElementById('itemName').value = '';
+            document.getElementById('itemDescription').value = '';
+            document.getElementById('itemCode').value = '';
+            document.getElementById('itemLocation').value = '';
+            function simulateBackendSubmission(name, description, code, location) {
+                console.log(`Submitted Item Details: ${name}, ${description}, ${code}, ${location}`);
+            }
+
+            function locateItem() {
+                const itemCodeInput = document.getElementById('locatorItemCode');
+                const resultParagraph = document.getElementById('result');
+                const itemCode = itemCodeInput.value;
+                const itemLocation = simulateBackendLogic(itemCode);
+                resultParagraph.textContent = ` Item Location: ${itemLocation}`;
+            }
+        }
